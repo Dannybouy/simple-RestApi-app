@@ -1,6 +1,5 @@
 import express from "express";
 import { createUser, getUsers, getUser, deleteUser, updateUser } from "../controllers/users.js";
-import { schemas, validateJoi } from "../validation/user.schema.js"
 
 const router = express.Router();
 
