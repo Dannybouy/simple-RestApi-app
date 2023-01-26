@@ -19,7 +19,7 @@ export const createUser = async (req, res) => { // routes to send/post request u
         age: Joi.number().integer().min(0).max(120).required()
       });
     
-      const { error, value } = schema.validate(req.body);
+      const { error } = schema.validate(req.body);
     
       if (error) {
         return res.status(400).json({ error: error.details[0].message });
